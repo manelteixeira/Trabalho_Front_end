@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Geladeira Aberta</title>
+
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <!-- Tela inicial -->
+      <section id="tela-inicial" class="login-card tela ativa">
+        <div class="logo">
+            <img src="imagem/logo.png" alt="Geladeira Aberta">
+        </div>
+
+        <p class="titulo">Deseja criar uma conta ?</p>
+
+        <div class="botoes-iniciais">
+          <button
+            class="btn-login"
+            type="button"
+            onclick="mostrarTela('tela-login')"
+          >
+            Login
+          </button>
+
+          <button
+            class="btn-cadastro"
+            type="button"
+            onclick="mostrarTela('tela-cadastro')"
+          >
+            Cadastrar-se
+          </button>
+
+          <button class="btn-visitante" type="button">
+            Continuar como visitante
+          </button>
+        </div>
+      </section>
+
+      <!-- Tela de cadastro -->
+      <section id="tela-cadastro" class="cadastro-card tela">
+        <div class="logo-cadastro">
+            <img src="imagem/logo.png" alt="Geladeira Aberta">
+        </div>
+
+        <p class="titulo-cadastro">Cadastrar</p>
+
+        <form class="formulario">
+          <div class="campo">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Digite seu email"
+              required
+            />
+          </div>
+
+          <div class="campo">
+            <label for="senha">Senha:</label>
+            <input
+              type="password"
+              id="senha"
+              placeholder="Digite sua senha"
+              required
+            />
+          </div>
+
+          <div class="campo">
+            <label for="confirmar-senha">Confirma senha:</label>
+            <input
+              type="password"
+              id="confirmar-senha"
+              placeholder="Digite sua senha"
+              required
+            />
+          </div>
+
+          <div class="botoes-cadastro">
+            <button type="submit" class="btn-confirmar">Confirmar</button>
+
+            <button
+              type="button"
+              class="btn-voltar"
+              onclick="mostrarTela('tela-inicial')"
+            >
+              Voltar
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- TELA DE LOGIN -->
+      <section id="tela-login" class="login-form-card tela">
+        <div class="logo">
+            <img src="imagem/logo.png" alt="Geladeira Aberta">
+        </div>
+
+        <p class="titulo-login">Login</p>
+
+        <form class="formulario-login">
+          <div class="campo-login">
+            <label for="login-email">Email:</label>
+            <input
+              type="email"
+              id="login-email"
+              placeholder="Digite seu email"
+              required
+            />
+          </div>
+
+          <div class="campo-login">
+            <label for="login-senha">Senha:</label>
+            <input
+              type="password"
+              id="login-senha"
+              placeholder="Digite sua senha"
+              required
+            />
+          </div>
+
+          <div class="botoes-login">
+            <button type="submit" class="btn-confirmar">Confirmar</button>
+
+            <button
+              type="button"
+              class="btn-voltar"
+              onclick="mostrarTela('tela-inicial')"
+            >
+              Voltar
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
