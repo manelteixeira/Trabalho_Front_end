@@ -1,4 +1,6 @@
+
 /* CONFIGURAÇÕES GERAIS */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,18 +12,17 @@ body {
   background-color: #fffff0;
 }
 
-/* ÁREA PRINCIPAL */
 .container {
   width: 100%;
   min-height: 100vh;
   padding: 24px;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 /* CONTROLE DAS TELAS */
+
 .tela {
   display: none;
 }
@@ -30,15 +31,20 @@ body {
   display: flex;
 }
 
-/* LOGO */
-.logo,
-.logo-cadastro {
-  width: 100%;
-  height: 100px;
+/* LOGOS */
 
+.logo,
+.logo-cadastro,
+.logo-rodape {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.logo,
+.logo-cadastro {
+  height: 100px;
 }
 
 .logo img,
@@ -48,95 +54,31 @@ body {
   object-fit: contain;
 }
 
-/* TELA INICIAL */
-.login-card {
-  width: 630px;
+/* CADASTRO E LOGIN */
+
+.cadastro-card,
+.login-form-card {
   max-width: 100%;
-  min-height: 476px;
-
   flex-direction: column;
   align-items: center;
-
-  border-radius: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.46);
-  background: #fff;
-  box-shadow: 0 6px 4px rgba(0, 0, 0, 0.25);
-
-  padding: 45px 30px;
-}
-
-.titulo {
-  color: #000;
-  font-size: 18px;
-  font-weight: 400;
-  text-align: center;
-
-  margin-top: 15px;
-  margin-bottom: 30px;
-}
-
-.botoes-iniciais {
-  display: flex;
-  width: 60%;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.botoes-iniciais button {
-  width: 100%;
-  min-height: 42px;
-
-  border-radius: 20px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.btn-login {
-  background-color: #21865d;
-  color: white;
-  border: none;
-}
-
-.btn-login:hover {
-  background-color: #176d49;
-}
-
-.btn-cadastro {
-  background-color: #f3b94f;
-  color: #333;
-  border: none;
-}
-
-.btn-cadastro:hover {
-  background-color: #e5a832;
-}
-
-.btn-visitante {
   background-color: white;
-  color: #668477;
-  border: 1px solid #b7c8c0;
+  box-shadow: 0 6px 4px rgba(0, 0, 0, 0.25);
 }
 
-.btn-visitante:hover {
-  background-color: #f3f7f4;
-}
-
-/* TELA DE CADASTRO */
 .cadastro-card {
   width: 480px;
-  max-width: 100%;
   min-height: 463px;
-
-  flex-direction: column;
-  align-items: center;
-
   padding: 30px 40px;
-
   border-radius: 32px;
   border: 1px solid rgba(0, 0, 0, 0.35);
-  background-color: white;
-  box-shadow: 0 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+.login-form-card {
+  width: 625px;
+  min-height: 472px;
+  padding: 40px;
+  border-radius: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.46);
 }
 
 .titulo-cadastro {
@@ -145,63 +87,113 @@ body {
   margin-bottom: 24px;
 }
 
-.formulario {
-  width: 100%;
+.titulo-login {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 30px 0 28px;
+}
 
+.formulario,
+.formulario-login {
+  width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.formulario {
   gap: 22px;
 }
 
-/* CAMPOS DO CADASTRO */
-.campo {
+.formulario-login {
+  gap: 29px;
+}
+
+.campo,
+.campo-login {
   display: grid;
-  grid-template-columns: 105px 1fr;
   align-items: center;
   gap: 10px;
+}
+
+.campo {
+  grid-template-columns: 105px 1fr;
+}
+
+.campo-login {
+  grid-template-columns: 130px 1fr;
 }
 
 .campo label {
   font-size: 14px;
 }
 
-.campo input {
+.campo-login label {
+  font-size: 18px;
+}
+
+.campo input,
+.campo-login input {
   width: 100%;
-  height: 35px;
-
-  padding: 0 15px;
-
   border: 1px solid #b5b5b5;
   border-radius: 25px;
-
-  font-size: 13px;
   outline: none;
 }
 
-.campo input::placeholder {
+.campo input {
+  height: 35px;
+  padding: 0 15px;
+  font-size: 13px;
+}
+
+.campo-login input {
+  height: 44px;
+  padding: 0 20px;
+  font-size: 16px;
+}
+
+.campo input::placeholder,
+.campo-login input::placeholder {
   color: #bdbdbd;
 }
 
-.campo input:focus {
+.campo input:focus,
+.campo-login input:focus {
   border-color: #35d52c;
 }
 
-/* BOTÕES DO CADASTRO */
-.botoes-cadastro {
+/* BOTÕES DOS FORMULÁRIOS */
+
+.botoes-cadastro,
+.botoes-login {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
 
+.botoes-cadastro {
   margin-top: 33px;
+}
+
+.botoes-login {
+  margin-top: 8px;
+}
+
+.botoes-cadastro button,
+.botoes-login button {
+  border-radius: 25px;
+  cursor: pointer;
 }
 
 .botoes-cadastro button {
   width: 108px;
   height: 36px;
-
-  border-radius: 25px;
   font-size: 13px;
-  cursor: pointer;
+}
+
+.botoes-login button {
+  width: 140px;
+  height: 46px;
+  font-size: 16px;
 }
 
 .btn-confirmar {
@@ -216,106 +208,359 @@ body {
   color: #35d52c;
 }
 
-/* TELA DE LOGIN */
-.login-form-card {
-  width: 625px;
-  max-width: 100%;
-  min-height: 472px;
+/* LANDING PAGE */
 
-  flex-direction: column;
-  align-items: center;
-
-  padding: 40px;
-
-  border-radius: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.46);
-  background-color: #ffffff;
-  box-shadow: 0 6px 4px rgba(0, 0, 0, 0.25);
-}
-
-.titulo-login {
-  font-size: 18px;
-  font-weight: 400;
-  margin-top: 30px;
-  margin-bottom: 28px;
-}
-
-.formulario-login {
+.landing-page {
   width: 100%;
+  max-width: 1100px;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 55px;
+  padding: 25px 40px;
+  background-color: #fffff0;
+}
 
+/* CABEÇALHO */
+
+.cabecalho {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cabecalho .logo {
+  width: 120px;
+  height: 80px;
+}
+
+.cabecalho .logo img {
+  width: 110px;
+  height: 75px;
+}
+
+/* APRESENTAÇÃO */
+
+.hero {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-conteudo {
+  width: 100%;
+}
+
+.destaque {
+  display: inline-block;
+  color: #21865d;
+  font-size: 13px;
+  background-color: #e8f5e9;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+
+.hero h1 {
+  color: #45382c;
+  font-size: 34px;
+  line-height: 1.2;
+  margin: 22px 0 18px;
+}
+
+.hero-conteudo p {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.hero-botoes {
   display: flex;
   flex-direction: column;
-  gap: 29px;
-}
-
-/* CAMPOS DO LOGIN */
-.campo-login {
-  display: grid;
-  grid-template-columns: 130px 1fr;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
 }
 
-.campo-login label {
-  font-size: 18px;
-}
-
-.campo-login input {
-  width: 100%;
-  height: 44px;
-
-  padding: 0 20px;
-
-  border: 1px solid #999999;
-  border-radius: 25px;
-
-  font-size: 16px;
-  outline: none;
-}
-
-.campo-login input::placeholder {
-  color: #c5c5c5;
-}
-
-.campo-login input:focus {
-  border-color: #35d52c;
-}
-
-/* BOTÕES DO LOGIN */
-.botoes-login {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-  margin-top: 8px;
-}
-
-.botoes-login button {
-  width: 140px;
-  height: 46px;
-
-  border-radius: 25px;
-  font-size: 16px;
+.hero-botoes button,
+.rodape button {
+  background-color: #22C55E;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 13px 22px;
   cursor: pointer;
 }
 
+.hero-botoes button:hover,
+.rodape button:hover {
+  background-color: #176d49;
+}
+
+.hero-botoes small {
+  color: #888;
+  font-size: 12px;
+}
+
+/* CARD DE INGREDIENTES E RECEITA */
+
+.hero-imagem {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.receita-container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.ingredientes-card {
+  background-color: white;
+  padding: 16px;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.ingredientes-titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  color: #45382c;
+  font-size: 12px;
+}
+
+.ingredientes-titulo span {
+  color: #21865d;
+  font-size: 10px;
+}
+
+.ingredientes-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.ingredientes-lista span {
+  background-color: #f8f5ed;
+  padding: 8px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+}
+
+.seta-receita {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.seta-receita span {
+  color: #35c878;
+  font-size: 20px;
+}
+
+.seta-receita small {
+  color: #888;
+  font-size: 10px;
+}
+
+.receita-card {
+  overflow: hidden;
+  background-color: white;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.receita-card img {
+  display: block;
+  width: 100%;
+  height: 145px;
+  object-fit: cover;
+}
+
+.receita-info {
+  padding: 12px;
+}
+
+.receita-detalhes {
+  display: flex;
+  justify-content: space-between;
+  color: #b76b35;
+  font-size: 9px;
+  margin-bottom: 8px;
+}
+
+.receita-info h3 {
+  color: #45382c;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+
+.receita-info p {
+  display: inline-block;
+  color: #21865d;
+  background-color: #e8f5e9;
+  padding: 6px 9px;
+  border-radius: 15px;
+  font-size: 10px;
+}
+
+/* COMO FUNCIONA */
+
+.como-funciona {
+  width: 100%;
+}
+
+.como-funciona h2 {
+  text-align: center;
+  color: #45382c;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.etapas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.etapa {
+  position: relative;
+  background-color: white;
+  padding: 25px 20px;
+  border-radius: 18px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.etapa span {
+  font-size: 25px;
+}
+
+.etapa small {
+  float: right;
+  color: #888;
+  font-size: 10px;
+}
+
+.etapa h3 {
+  color: #45382c;
+  font-size: 15px;
+  margin: 15px 0 10px;
+}
+
+.etapa p,
+.beneficios p {
+  color: #777;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* BENEFÍCIOS */
+
+.beneficios {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: white;
+  padding: 25px;
+  border-radius: 18px;
+  gap: 20px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.beneficios div {
+  padding: 5px 15px;
+}
+
+.beneficios div + div {
+  border-left: 1px solid #eee;
+}
+
+.beneficios h3 {
+  color: #45382c;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/* RODAPÉ */
+
+.rodape {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0 20px;
+}
+
+.logo-rodape img {
+  width: 75px;
+  height: 65px;
+  object-fit: contain;
+}
+
+.rodape h2 {
+  color: #45382c;
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+
+.links-rodape {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.links-rodape a {
+  color: #777;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.rodape p {
+  color: #888;
+  font-size: 11px;
+  margin-top: 15px;
+}
+
 /* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+  .landing-page {
+    padding: 20px;
+    gap: 40px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  .etapas,
+  .beneficios {
+    grid-template-columns: 1fr;
+  }
+
+  .beneficios div + div {
+    border-left: none;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+  }
+
+  .rodape h2 {
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 480px) {
-  .login-card {
-    min-height: 400px;
-    border-radius: 25px;
-    padding: 35px 20px;
-  }
-
-  .botoes-iniciais {
-    width: 85%;
-  }
-
-  .titulo {
-    font-size: 16px;
-  }
-
-  .cadastro-card {
+  .cadastro-card,
+  .login-form-card {
     padding: 30px 20px;
     border-radius: 25px;
   }
@@ -331,11 +576,6 @@ body {
 
   .campo input {
     font-size: 12px;
-  }
-
-  .login-form-card {
-    padding: 35px 20px;
-    border-radius: 25px;
   }
 
   .campo-login {

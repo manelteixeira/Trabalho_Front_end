@@ -12,35 +12,161 @@
   <body>
     <main class="container">
       <!-- Tela inicial -->
-      <section id="tela-inicial" class="login-card tela ativa">
-        <div class="logo">
-            <img src="imagem/logo.png" alt="Geladeira Aberta">
+      
+<!-- Landing Page -->
+
+<!-- Landing Page -->
+<section id="tela-inicial" class="landing-page tela ativa">
+
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+    <div class="logo">
+      <img src="imagem/logo.png" alt="Geladeira Aberta">
+    </div>
+  </header>
+
+  <!-- Apresentação -->
+<section id="inicio" class="hero">
+
+  <div class="hero-conteudo">
+    <span class="destaque">
+      ✨ Cozinhe com o que você já tem em casa
+    </span>
+
+    <h1>
+      Transforme os ingredientes da sua geladeira em receitas incríveis.
+    </h1>
+
+    <p>
+      Evite o desperdício, economize nas compras e descubra pratos deliciosos
+      em segundos. Basta dizer o que você tem em casa.
+    </p>
+
+    <div class="hero-botoes">
+      <button type="button" onclick="mostrarTela('tela-cadastro')">
+        Começar Agora — É Grátis →
+      </button>
+
+      <small>Não precisa de cartão de crédito</small>
+    </div>
+  </div>
+
+  <div class="hero-imagem">
+    <div class="receita-container">
+
+      <div class="ingredientes-card">
+        <div class="ingredientes-titulo">
+          <strong>Sua geladeira, hoje</strong>
+          <span>4 itens</span>
         </div>
 
-        <p class="titulo">Deseja criar uma conta ?</p>
-
-        <div class="botoes-iniciais">
-          <button
-            class="btn-login"
-            type="button"
-            onclick="mostrarTela('tela-login')"
-          >
-            Login
-          </button>
-
-          <button
-            class="btn-cadastro"
-            type="button"
-            onclick="mostrarTela('tela-cadastro')"
-          >
-            Cadastrar-se
-          </button>
-
-          <button class="btn-visitante" type="button">
-            Continuar como visitante
-          </button>
+        <div class="ingredientes-lista">
+          <span>🥚 Ovos</span>
+          <span>🍅 Tomate</span>
+          <span>🧀 Queijo</span>
+          <span>🍗 Frango</span>
         </div>
-      </section>
+      </div>
+
+      <div class="seta-receita">
+        <span>↓</span>
+        <small>Um match delicioso</small>
+      </div>
+
+      <article class="receita-card">
+        <img src="imagem/Omelete.png" alt="Omelete de Frango e Queijo">
+
+        <div class="receita-info">
+          <div class="receita-detalhes">
+            <span>FEITO PARA SUA GELADEIRA</span>
+            <span>♡ 12 min</span>
+          </div>
+
+          <h3>Omelete de Frango e Queijo</h3>
+          <p>✓ Você já tem todos os ingredientes!</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+</section>
+
+  <!-- Como funciona -->
+  <section id="como-funciona" class="como-funciona">
+    <h2>Simples como abrir a geladeira</h2>
+
+    <div class="etapas">
+
+      <article class="etapa">
+        <span>🥕</span>
+        <small>01</small>
+        <h3>1. Adicione seus ingredientes</h3>
+        <p>Digite o que tem na sua geladeira ou despensa em poucos cliques.</p>
+      </article>
+
+      <article class="etapa">
+        <span>🍳</span>
+        <small>02</small>
+        <h3>2. Descubra receitas na hora</h3>
+        <p>Nosso sistema cruza seus itens e filtra por tempo de preparo, dieta ou dificuldade.</p>
+      </article>
+
+      <article class="etapa">
+        <span>♨️</span>
+        <small>03</small>
+        <h3>3. Cozinhe sem desperdício</h3>
+        <p>Siga o passo a passo ilustrado e saiba exatamente se falta algum tempero.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Benefícios -->
+  <section id="beneficios" class="beneficios">
+
+    <div>
+      <h3>⏱️ Receitas Rápidas</h3>
+      <p>Opções práticas de até 15 minutos para a rotina corrida.</p>
+    </div>
+
+    <div>
+      <h3>🌱 Menos Desperdício</h3>
+      <p>Aproveite alimentos antes que estraguem e economize no fim do mês.</p>
+    </div>
+
+    <div>
+      <h3>🌍 Filtros Inteligentes</h3>
+      <p>Opções vegetarianas, veganas e sem glúten adaptadas ao seu gosto.</p>
+    </div>
+
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+
+    <div class="logo-rodape">
+      <img src="imagem/logo.png" alt="Geladeira Aberta">
+    </div>
+
+    <h2>Pronto para preparar sua próxima refeição?</h2>
+
+    <button type="button" onclick="mostrarTela('tela-login')">
+      Acessar Minha Geladeira →
+    </button>
+
+    <div class="links-rodape">
+      <a href="#">Termos</a>
+      <a href="#">Privacidade</a>
+      <a href="#">Contato</a>
+    </div>
+
+    <p>Menos desperdício. Mais sabor. Mais possibilidades.</p>
+
+  </footer>
+
+</section>
+
 
       <!-- Tela de cadastro -->
       <section id="tela-cadastro" class="cadastro-card tela">
